@@ -9,13 +9,13 @@ https://github.com/manisrini/TagField
 
 *Initial Configuration*
 
-` 
+```
 let tagComponent = TagFieldComponent()
 let tags = [Tag(id: 1, text: "Mango"),Tag(id: 2, text: "Apple")]
 let tagVM = TagFieldComponentViewModel(tags: tags,disableTextField: false)
 tagComponent.config(viewModel: tagVM)
 self.view.addSubview(tagComponent)
- `
+ ```
 
 - Can give the initial tags if needed by passing it through a param named "tags".
 - Can disable the text field(in case of only displaying the tags) if needed.
@@ -23,7 +23,7 @@ self.view.addSubview(tagComponent)
 
 *Append a new tag :*
 
-` self._tagComponent.appendNewTag(tag: tag)`
+```self._tagComponent.appendNewTag(tag: tag)```
 
 **TODO LIST :**
 1.Need to introduce a configuration :
