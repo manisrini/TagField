@@ -2,7 +2,8 @@
 
 A library to present a list of tagFields in a left aligned collectionView.
 
-**SPM URL**: 
+**SPM URL**:
+
 https://github.com/manisrini/TagField
 
 **How to Use the TagField?**
