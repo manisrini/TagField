@@ -7,7 +7,7 @@ https://github.com/manisrini/TagField
 
 **How to Use the TagField?**
 
-*Initial Configuration*
+*Initial Configuration :*
 
 ```
 let tagComponent = TagFieldComponent()
