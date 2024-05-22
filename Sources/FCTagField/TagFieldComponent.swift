@@ -310,7 +310,7 @@ extension TagFieldComponent : FCTextFieldCellDelegate
         self.delegate?.didGetFrame(origin: origin)
     }
     
-    func isFieldFocused(focus: Bool,cellTag : Int?) {
+    func isFieldFocused(focus: Bool) {
         
         
         if focus{
@@ -381,7 +381,14 @@ extension TagFieldComponent : FCTextFieldCellDelegate
     func typedText(text: String) {
         
         self.viewModel?.currentTypedText = text
-        self.delegate?.handleTypedText(text: text)
+        
+        if let _specialCharacter = self.viewModel?.specialCharacter{
+            if let tag = self.viewModel?.createNewTag(text: text,specialCharacter : _specialCharacter){
+                self.appendNewTag(tag: tag)
+            }
+        }else{
+            self.delegate?.handleTypedText(text: text)
+        }
         
         if let _viewModel = viewModel{
             if !_viewModel.currentTypedText.isWhiteSpace(){

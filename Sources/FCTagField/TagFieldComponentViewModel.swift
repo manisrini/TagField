@@ -30,16 +30,18 @@ public class TagFieldComponentViewModel
     var tags : [Tag] = []
     public var textFieldId : Int = 0
     public var truncateViewWhenFieldNotFocused : Bool = true
+    public var specialCharacter : Character?
     
     var numberOfItems : Int = 0
     var isTextFieldFocused : Bool = false
     var currentTypedText : String = ""
     var didSomeOtherAction : Bool = false
 
-    public init(tags: [Tag] = [],disableTextField : Bool = false,truncateViewWhenFieldNotFocused: Bool = true) {
+    public init(tags: [Tag] = [],disableTextField : Bool = false,specialCharacter : Character? = nil,truncateViewWhenFieldNotFocused: Bool = true) {
         self.masterTags = tags
         self.tags = tags
         self.disableTextField = disableTextField
+        self.specialCharacter = specialCharacter
         self.truncateViewWhenFieldNotFocused = truncateViewWhenFieldNotFocused
         
         if !isTextFieldFocused && masterTags.count > 1{
@@ -110,5 +112,17 @@ public class TagFieldComponentViewModel
         }else{
             return tag.text
         }
+    }
+    
+    func createNewTag(text : String,specialCharacter : Character) -> Tag?
+    {
+        var tagText = text
+        if tagText.last == specialCharacter{
+            tagText = String(tagText.dropLast())
+            let id = Int.random(in: 0..<1000)
+            let tag = Tag(id: id, text: tagText)
+            return tag
+        }
+        return nil
     }
 }

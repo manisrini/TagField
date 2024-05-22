@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol FCTextFieldCellDelegate : AnyObject{
+@objc protocol FCTextFieldCellDelegate : AnyObject{
     func didClickEmptyBackSpace()
     func didTypeText()
     func typedText(text : String)
-    func isFieldFocused(focus : Bool,cellTag : Int?)
+    func isFieldFocused(focus : Bool)
     func didGetFrame(origin : CGPoint)
     
 }
@@ -34,8 +34,7 @@ class FCTextFieldCollectionViewCell: UICollectionViewCell {
     var txtViewHeight : CGFloat = 40
     var txtView : BackSpaceListenerTextView?
     var id : Int = 0
-    var theme : TxtFieldTheme = TxtFieldTheme()
-    
+    var theme : TxtFieldTheme = TxtFieldTheme()    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -65,7 +64,7 @@ class FCTextFieldCollectionViewCell: UICollectionViewCell {
         }
         
         txtView.isFieldFocused = { [weak self] focus in
-            self?.delegate?.isFieldFocused(focus: focus,cellTag: self?.id)
+            self?.delegate?.isFieldFocused(focus: focus)
         }
         
         txtView.didTypeText = { [weak self] in
