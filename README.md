@@ -30,7 +30,7 @@ self.view.addSubview(tagComponent)
 
 ```self._tagComponent.appendNewTag(tag: tag)```
 
-# Useful delegates:
+# Delegates:
 
 ``` func didGetInstance(instance : TagFieldComponent) ```
 
