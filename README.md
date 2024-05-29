@@ -8,7 +8,9 @@
 
 Use the following link to add TagField as a Package Dependency to an Xcode project:
 
-``` https://github.com/manisrini/TagField ```
+```
+https://github.com/manisrini/TagField
+```
 
 # Configuration :
 
@@ -24,7 +26,7 @@ self.view.addSubview(tagComponent)
 - Can disable the text field(in case of only displaying the tags) if needed.
 - Get callback for the every character entered.
 
-*Append a new tag :*
+*Append a new tag : (Needed only when you are not using special character configuration) *
 
 ```self._tagComponent.appendNewTag(tag: tag)```
 
