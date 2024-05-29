@@ -26,7 +26,7 @@ self.view.addSubview(tagComponent)
 - Can disable the text field(in case of only displaying the tags) if needed.
 - Get callback for the every character entered.
 
-*Append a new tag : (Needed only when you are not using special character configuration) *
+* Append a new tag : (Needed only when you are not using special character configuration) *
 
 ```self._tagComponent.appendNewTag(tag: tag)```
 
@@ -58,11 +58,17 @@ self.view.addSubview(tagComponent)
 
 #SCREENSHOTS:
 
-** Truncated state **
+*Truncated state:*
 
 <img src="Truncate.png" width="250" height="480" >
 
-** Expanded state **
+*Expanded state:*
 
 <img src="Expand.png" width="250" height="480" >
+
+*Demo:* 
+
+https://github.com/manisrini/TagField/assets/55348452/c3101445-9c8a-4bad-84d9-09a69c817a9e
+
+
 
