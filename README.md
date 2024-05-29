@@ -1,6 +1,6 @@
 # TagField
 
-- A library to represent a list of tags in a left aligned collection View.
+- A library to represent a list of tags in a left aligned collectionview.
 - Tags get truncated when the textfield gets focused.
 - Tags get expanded when the textfield is not focused.
 
