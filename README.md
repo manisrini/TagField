@@ -53,8 +53,8 @@ self.view.addSubview(tagComponent)
 
 # TODO LIST :
 
-• Add truncate and expand as a configuration from the user.
-• Introduce theme to customise fonts and background colors.
+- Add truncate and expand as a configuration from the user.
+- Introduce theme to customise fonts and background colors.
 
 #SCREENSHOTS:
 
